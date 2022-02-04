@@ -4,6 +4,35 @@
   height: 600px;
   width: 100%;
 }
+.one-time {
+  align-self: center;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.one-time img {
+  align-self: center;
+  justify-content: center;
+  margin-left: 40%;
+}
+.slider-title {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.25vw;
+  margin-top: 11px;
+  margin-bottom: 19px;
+  line-height: 130%;
+  color: black;
+}
+.slider-text {
+  align-self: center;
+  justify-content: center;
+  text-align: center;
+  margin-left: 33.594vw;
+  width: 32.813vw;
+}
 /* About start */
 .firstTexts {
   display: flex;
@@ -673,49 +702,45 @@ a:active {
   .textTitle {
     margin-left: 0;
   }
-  .we{
+  .we {
     margin-top: 220vw;
   }
-  .parentContainer{
+  .parentContainer {
     flex-direction: column;
     margin-left: 0;
   }
-  .parentContainer:last-child{
+  .parentContainer:last-child {
     margin-top: 0;
   }
-  .textContent{
+  .textContent {
     width: 100%;
     padding-top: 0;
-    
   }
-  .people{
+  .people {
     background-position: center;
     width: 100%;
   }
-.wrapp{
-  margin-left: 0;
- 
-}
-.flexbox1{
-  flex-direction: column;
-}
-.contact{
-  flex-direction: column
-}
-.contactustext{
-  width: 100%;
-}
-.section{
-  flex-direction: column;
-  width: 100%;
-
-}
-.section div{
-  margin-left: 0;
-  
-}
-.tirdFlex{
-  flex-direction: column-reverse;
-  gap: 0;
-}
+  .wrapp {
+    margin-left: 0;
+  }
+  .flexbox1 {
+    flex-direction: column;
+  }
+  .contact {
+    flex-direction: column;
+  }
+  .contactustext {
+    width: 100%;
+  }
+  .section {
+    flex-direction: column;
+    width: 100%;
+  }
+  .section div {
+    margin-left: 0;
+  }
+  .tirdFlex {
+    flex-direction: column-reverse;
+    gap: 0;
+  }
 }

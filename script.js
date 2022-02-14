@@ -54,4 +54,5 @@ $(document).ready(function () {
     let secondDiv = document.getElementById(`last-div`);
     secondDiv.appendChild(flex);
   }
+  
 });

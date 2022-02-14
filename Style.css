@@ -1,3 +1,30 @@
+body {
+  overflow-x: hidden;
+}
+.blackdivs {
+  border: solid 0.5px black;
+  width: 0.833vw;
+  height: 0.833vw;
+  border-radius: 50%;
+  margin: 5px auto;
+  cursor: pointer;
+}
+.sel {
+  background-color: black;
+}
+.slide-box {
+  display: flex;
+  flex-direction: row;
+  width: 9.5vw;
+  margin: 0 auto;
+  gap: 1vw;
+  margin-top: 0.833vw;
+}
+.error-div {
+  display: none;
+  margin-left: 30%;
+  color: red;
+}
 .mainPic {
   background-image: url("Images/Slider.jpg");
   background-size: cover;

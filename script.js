@@ -40,19 +40,18 @@ $(document).ready(function () {
     `There are many university programs specialized in finance and accounting in Armenia. Since our students get quality education, they later become professionals at our firm who provide quality work to customers.
 `,
   ];
-  for(let i = 0; i< 7; i++){
+  for (let i = 0; i < 7; i++) {
     let flex = document.createElement(`div`);
     flex.classList.add(`news-divs`);
     let paragraphs = document.createElement(`p`);
     let titlePars = document.createElement(`p`);
-    titlePars.classList.add(`title-p`)
+    titlePars.classList.add(`title-p`);
     paragraphs.classList.add(`in-style`);
     flex.appendChild(titlePars);
     flex.appendChild(paragraphs);
-    titlePars.textContent = titleArray[i]
+    titlePars.textContent = titleArray[i];
     paragraphs.textContent = contentArray[i];
     let secondDiv = document.getElementById(`last-div`);
-    secondDiv.appendChild(flex)
+    secondDiv.appendChild(flex);
   }
-
 });

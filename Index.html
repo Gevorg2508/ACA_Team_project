@@ -7,6 +7,32 @@
     <title>Our project</title>
     <link href="http://fonts.cdnfonts.com/css/montserrat" rel="stylesheet" />
     <link rel="stylesheet" href="Style.css" />
+    <style>
+      .blackdivs {
+        border: solid 0.5px black;
+        width: 0.833vw;
+        height: 0.833vw;
+        border-radius: 50%;
+        margin: 5px auto;
+        cursor: pointer;
+      }
+      .sel {
+        background-color: black;
+      }
+      .slide-box {
+        display: flex;
+        flex-direction: row;
+        width: 9.5vw;
+        margin: 0 auto;
+        gap: 1vw;
+        margin-top: 0.833vw;
+      }
+      .error-div {
+        display: none;
+        margin-left: 30%;
+        color: red;
+      }
+    </style>
   </head>
   <body>
     <!--Start of Menu -->
@@ -27,6 +53,13 @@
     <!-- End of Menu -->
     <div class="mainPic">
       <div class="title">Grow your company with us</div>
+    </div>
+    <div class="slide-box">
+      <div class="blackdivs sel" id="0"></div>
+      <div class="blackdivs" id="1"></div>
+      <div class="blackdivs" id="2"></div>
+      <div class="blackdivs" id="3"></div>
+      <div class="blackdivs" id="4"></div>
     </div>
     <div class="textTitle">Who are we?</div>
     <div class="flexbox1">
@@ -112,7 +145,14 @@
       <div class="inputContent">
         <div class="contactustext">Let’s get in touch!</div>
         <form action="#" method="get">
-          <input type="text" placeholder="First name" required />
+          <input
+            id="input1"
+            onkeyup="func1()"
+            type="text"
+            placeholder="First name"
+            required
+          />
+          <div class="error-div">Please enter only letters.</div>
           <input type="text" placeholder="E-mail address" required />
           <input type="text" placeholder="Phone number" required />
           <div class="messaje">Message</div>
@@ -169,8 +209,8 @@
         </div>
       </div>
     </section>
-    <!-- Footer --> 
- <div class="footer">
+    <!-- Footer -->
+    <div class="footer">
       <div class="footer-container">
         <div class="footer-section">
           <div class="address">Address</div>
@@ -189,12 +229,59 @@
             <div class="qa">O2A<br />Outsource To Armenia</div>
           </div>
         </div>
-        <div class="footer-section"> 
-         <div class="address">Telephone</div>
+        <div class="footer-section">
+          <div class="address">Telephone</div>
           <div class="footer-text">+374 93 37 11 97</div>
           <div class="footer-text">+374 77 77 41 00</div>
         </div>
       </div>
     </div>
+    <script>
+      let picturArray = [
+        `Images/Slider.jpg`,
+        `Images/picture_6.png`,
+        `Images/picture_4.png`,
+        `Images/people.png`,
+        `Images/picture_7.png`,
+      ];
+      let titleArray = [
+        `Grow your company with us`,
+        `Who are we?`,
+        `What we offer? `,
+        `Affordable prices`,
+        `Total security`,
+      ];
+      let firstDiv = document.getElementsByClassName(`blackdivs`);
+      let main = document.getElementsByClassName(`mainPic`)[0];
+      let title = document.getElementsByClassName(`title`)[0];
+      for (let i = 0; i < picturArray.length; i++) {
+        firstDiv[i].addEventListener(`click`, update);
+      }
+      function update() {
+        main.style.backgroundImage = `url(${picturArray[event.target.id]})`;
+        title.textContent = titleArray[event.target.id];
+        for (let i = 0; i < picturArray.length; i++) {
+          firstDiv[i].classList.remove(`sel`);
+        }
+        event.target.classList.add(`sel`);
+      }
+      let input = document.getElementById(`input1`);
+      function func1() {
+        let valuesArray = [];
+        for (let i = 0; i < input.value.length; i++) {
+          valuesArray.push(input.value[i]);
+          if (!isNaN(valuesArray[i])) {
+            console.log(`Please enter a text` + valuesArray[i]);
+            document.getElementsByClassName(
+              `error-div`
+            )[0].style.display = `block`;
+          } else {
+            document.getElementsByClassName(
+              `error-div`
+            )[0].style.display = `none`;
+          }
+        }
+      }
+    </script>
   </body>
-</html> 
+</html>

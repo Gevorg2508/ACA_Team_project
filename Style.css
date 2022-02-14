@@ -2,6 +2,9 @@
   background-image: url("Images/Slider.jpg");
   background-size: cover;
   height: 600px;
+  animation-delay: 2s;
+  transition: 1s;
+  left: 0px;
   width: 100%;
 }
 .last-div {
@@ -13,14 +16,14 @@
   grid-template-columns: 1fr 1fr 1fr;
   margin-bottom: 100px;
 }
-.title-p{
+.title-p {
   font-family: Montserrat;
   font-style: normal;
   font-weight: 600;
   font-size: 1.25vw;
   line-height: 130%;
-   color: #000000;
-   text-align: center;
+  color: #000000;
+  text-align: center;
 }
 .in-style {
   width: 19.896vw;
@@ -46,7 +49,7 @@
   margin-bottom: 10px;
   display: flex;
   flex-direction: column;
-  gap: 5px
+  gap: 5px;
 }
 .one-time {
   align-self: center;
@@ -161,6 +164,7 @@
   position: relative;
   margin-top: 13px;
 }
+
 .picture6 {
   margin-top: 25px;
   margin-left: 313px;
@@ -172,6 +176,7 @@
   flex-direction: row;
   gap: 100px;
   padding-top: 5%;
+  margin-bottom: 100px;
 }
 .contain p {
   width: 30%;
@@ -193,6 +198,9 @@
   margin-left: 227px;
   padding-top: 440px;
   background-position: bottom bottom;
+  transition: 1s;
+
+  /* left: -100px; */
 }
 .textTitle {
   margin-top: 108px;
@@ -641,7 +649,7 @@ textarea {
   height: 5.521vw;
   margin-bottom: 1.563vw;
   display: grid;
-  grid-template-columns: 20% 40% 40%;
+  grid-template-columns: 20% 40% 36%;
 }
 .menu-container {
   display: flex;
